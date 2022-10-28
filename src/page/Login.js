@@ -8,7 +8,7 @@ import React, { useContext } from 'react';
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../UserContext/UserContext';
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 const Login = () => {
     const { ProviderLogIn, userLogIn } = useContext(AuthContext);
