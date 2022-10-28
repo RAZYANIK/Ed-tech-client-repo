@@ -9,10 +9,10 @@ const Checkout = () => {
     console.log(selectedCourse);
     return (
         <div className="container mt-5 mb-5">
-            <Card className="bg-dark border rounded-5 border-2 border-dark">
+            <Card className="bg-info rounded-2 ">
                 <Card.Img
                     variant="top"
-                    className="img-fluid p-2 rounded-5"
+                    className="img-fluid p-0 rounded-1"
                     src={selectedCourse.coverPicture}
                 />
                 <Card.Body>
