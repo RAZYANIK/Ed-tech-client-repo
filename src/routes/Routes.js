@@ -8,7 +8,6 @@ import Faq from "../page/Faq";
 import Home from "../page/Home/Home";
 import Login from "../page/Login";
 import Signup from "../page/Signup";
-import NotFound from "./NotFound";
 import PrivateRoute from "./PrivateRoute";
 
 
@@ -61,6 +60,6 @@ export const routes = createBrowserRouter([
     },
     {
         path: "/*",
-        element: <NotFound></NotFound>,
+        element: <div><img className='d-flex mx-auto' src="https://studio.uxpincdn.com/studio/wp-content/uploads/2021/06/10-error-404-page-examples-for-UX-design.png.webp" alt="" /></div>,
     },
 ])
