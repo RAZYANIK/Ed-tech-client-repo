@@ -51,7 +51,7 @@ const CourseDetails = () => {
                     <h6 className="fw-semibold mt-5"><span className='fw-bold text-success'>What you'll learn: </span> {courseDetails.description}</h6>
                     <div className="mb-3 mt-2 d-flex justify-content-between">
                         <div>
-                            <h6 className="fw-bold mt-5 mb-3 ms-4 text-success">Requirements</h6>
+                            <h6 className="fw-bold mt-5 mb-3 ms-4 text-success text-center">Requirements</h6>
                             {courseDetails.preRequisites.map((item) => (
                                 <ul className='fw-semibold'>{item}</ul>
                             ))}

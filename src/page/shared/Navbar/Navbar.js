@@ -8,11 +8,12 @@ const Navbar = () => {
 
 
     return (
-        <div className="mt-5 bg-light p-3 rounded-1 ">
+        <div className="mt-5 bg-light p-2 rounded-1 ">
+            <h6 className='bg-warning m-3 p-1 text-center'>Courses to get you started</h6>
             {courses.map(course =>
                 <p
                     key={course.course_id}
-                    className="bg-dark px-1 py-5  my-2 rounded-2 text-center "
+                    className="bg-dark px-2 py-5  my-4 rounded-2 text-center "
                 >
                     <Link
                         to={`/course/${course.course_id}`}

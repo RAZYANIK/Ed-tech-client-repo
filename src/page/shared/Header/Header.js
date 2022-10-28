@@ -47,7 +47,7 @@ const Header = () => {
                             </Nav.Link>
                             <Nav.Link className="fw-semibold text-white px-4 text-center">
                                 <Link
-                                    className="text-decoration-none fw-semibold text-white"
+                                    className="text-decoration-none fw-semibold text-dark"
                                     to="/faq"
                                 >
                                     FAQ
