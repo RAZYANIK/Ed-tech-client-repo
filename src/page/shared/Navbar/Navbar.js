@@ -15,7 +15,7 @@ const Navbar = () => {
                     className="bg-dark px-1 py-3  my-2 rounded-2 text-center "
                 >
                     <Link
-                        to={`/courses/${course.course_id}`}
+                        to={`/course/${course.course_id}`}
                         className=" text-decoration-none text-white fw-normal"
                     >
                         {course.courseName}
