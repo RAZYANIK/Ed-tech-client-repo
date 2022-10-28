@@ -48,16 +48,16 @@ const CourseDetails = () => {
 
 
                     </div>
-                    <h6 className="fw-semibold mt-5"><span className='fw-bold text-success'>What you'll learn: </span> {courseDetails.description}</h6>
-                    <div className="mb-3 mt-2 d-flex justify-content-between">
+                    <h6 className="fw-semibold mt-3 "><span className='fw-bold text-success'>What you'll learn: </span> {courseDetails.description}</h6>
+                    <div className="mb-3 mt-2 ">
                         <div>
-                            <h6 className="fw-bold mt-5 mb-3 ms-4 text-success text-center">Requirements</h6>
+                            <h6 className="fw-bold mt-5 mb-3  text-success ">Requirements</h6>
                             {courseDetails.preRequisites.map((item) => (
                                 <ul className='fw-semibold'>{item}</ul>
                             ))}
                         </div>
                         <div>
-                            <h6 className="fw-bold ms-4 mt-5 mb-3 text-success">SKILLS YOU WILL GAIN</h6>
+                            <h6 className="fw-bold  mt-5 mb-3 text-success">SKILLS YOU WILL GAIN</h6>
                             {courseDetails.courseContent.map((item) => (
                                 <ul className='fw-semibold'>{item}</ul>
                             ))}

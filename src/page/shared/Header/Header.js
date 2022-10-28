@@ -95,6 +95,7 @@ const Header = () => {
                                                 <FaUser
                                                     style={{ height: "25px", width: "25px" }}
                                                     className="text-dark bg-light rounded-5 border border-info border-2"
+                                                    title={user.displayName}
                                                 ></FaUser>
                                             </div>
                                         )}
