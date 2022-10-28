@@ -8,15 +8,15 @@ const Navbar = () => {
 
 
     return (
-        <div className="mt-5 bg-danger p-3 rounded-1 ">
+        <div className="mt-5 bg-light p-3 rounded-1 ">
             {courses.map(course =>
                 <p
                     key={course.course_id}
-                    className="bg-dark px-1 py-3  my-2 rounded-2 text-center "
+                    className="bg-dark px-1 py-5  my-2 rounded-2 text-center "
                 >
                     <Link
                         to={`/course/${course.course_id}`}
-                        className=" text-decoration-none text-white fw-normal"
+                        className=" text-decoration-none text-white fw-semibold"
                     >
                         {course.courseName}
                     </Link>

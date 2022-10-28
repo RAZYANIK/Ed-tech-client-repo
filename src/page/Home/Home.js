@@ -5,10 +5,11 @@ import Slider from '../shared/Slider/Slider';
 
 const Home = () => {
     return (
-        <div>
+        <div className='pt-3'>
             <Container lg-10>
-                <h1 className='text-info'>Welcome to Edu.course </h1>
+                <h2 className='text-dark fw-bold'>Learn From The World's Leading Experts </h2>
                 <Slider></Slider>
+
             </Container>
         </div>
     );

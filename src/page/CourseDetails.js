@@ -13,7 +13,7 @@ const CourseDetails = () => {
     return (
         <div>
             <div className="container mt-5">
-                <Card className="bg-dark text-white rounded-5 mb-5">
+                <Card className="bg-dark text-white rounded-2 mb-5">
                     <Card.Img
                         src={courseDetails.coverPicture}
                         alt="Card image"
@@ -25,66 +25,60 @@ const CourseDetails = () => {
 
                     <Pdf targetRef={ref} filename={`${courseDetails.courseName}.pdf`}>
                         {({ toPdf }) => (
-                            <Button variant="warning" className="px-5 py-2" onClick={toPdf}>
+                            <Button variant="info" className="px-5 py-2 rounded-0" onClick={toPdf}>
                                 <span className="me-2">Download PDF</span>
                                 <FaDownload />
                             </Button>
                         )}
                     </Pdf>
-
-
-
-
                 </div>
                 <div ref={ref}>
-                    <div className="mb-3">
+                    <div className="mb-3  d-flex justify-content-between mt-5">
                         <h5>
-                            <Badge bg="dark" className="text-warning">
-                                Course Price: {courseDetails.price}
+                            <Badge bg="success" className="text-dark p-4 rounded-0 ">
+                                Course Instructor: {courseDetails.courseInstructor}
                             </Badge>
+
                         </h5>
                         <h5>
-                            <Badge bg="warning" className="text-dark">
+                            <Badge bg="info" className="text-dark p-4 rounded-0 ms-5">
                                 Course Duration: {courseDetails.duration}
                             </Badge>
                         </h5>
-                        <h5>
-                            <Badge bg="warning" className="text-dark">
-                                Course Instructor: {courseDetails.courseInstructor}
-                            </Badge>
-                        </h5>
+
+
                     </div>
-                    <h6 className="fw-semibold mt-5">{courseDetails.description}</h6>
-                    <div className="mb-3 mt-5">
+                    <h6 className="fw-semibold mt-5"><span className='fw-bold text-success'>What you'll learn: </span> {courseDetails.description}</h6>
+                    <div className="mb-3 mt-2 d-flex justify-content-between">
                         <div>
-                            <h6 className="fw-bold mt-5 mb-3">PRE-REQUISITES</h6>
+                            <h6 className="fw-bold mt-5 mb-3 ms-4 text-success">Requirements</h6>
                             {courseDetails.preRequisites.map((item) => (
-                                <li>{item}</li>
+                                <ul className='fw-semibold'>{item}</ul>
                             ))}
                         </div>
                         <div>
-                            <h6 className="fw-bold mt-5 mb-3">COURSE CONTENT</h6>
+                            <h6 className="fw-bold ms-4 mt-5 mb-3 text-success">SKILLS YOU WILL GAIN</h6>
                             {courseDetails.courseContent.map((item) => (
-                                <li>{item}</li>
+                                <ul className='fw-semibold'>{item}</ul>
                             ))}
+                            <h5>
+                                <Badge bg="danger" className="text-light p-3 rounded-0 ms-4 mt-5">
+                                    Course Fee: {courseDetails.price}
+                                </Badge>
+                            </h5>
                         </div>
-                        <div>
-                            <h6 className="fw-bold mt-5 mb-3">PROJECTS</h6>
-                            {courseDetails.projects.map((item) => (
-                                <li>{item}</li>
-                            ))}
-                        </div>
+
                     </div>
                 </div>
                 <Button
                     className="px-5 py-2 d-block mx-auto mb-5 mt-5 fw-bold"
-                    variant="dark"
+                    variant="success"
                 >
                     <Link
                         to={`/checkout/${courseDetails.course_id}`}
-                        className="text-warning text-decoration-none"
+                        className="text-light text-decoration-none"
                     >
-                        Get Premium Access
+                        Get Full Access
                     </Link>
                 </Button>
             </div>

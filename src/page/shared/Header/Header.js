@@ -27,17 +27,17 @@ const Header = () => {
 
     return (
         <div>
-            <Navbar bg="dark" variant="dark" expand="lg">
+            <Navbar bg="info" variant="dark" expand="lg">
                 <Container>
                     <Navbar.Brand className="fw-bold">
                         <Link className="text-decoration-none text-white" to="/">
-                            Hex <span className="text-warning">Bytes</span>
+                            Ed.<span className="text-dark">Tech</span>
                         </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="mx-auto">
-                            <Nav.Link className="px-5 text-center">
+                    <Navbar.Collapse id="basic-navbar-nav" className='d-flex justify-content-between'>
+                        <Nav className="mx-4">
+                            <Nav.Link className="px-4 text-center">
                                 <Link
                                     className="text-decoration-none fw-semibold text-white"
                                     to="/course"
@@ -45,10 +45,15 @@ const Header = () => {
                                     Courses
                                 </Link>
                             </Nav.Link>
-                            <Nav.Link className="fw-semibold text-white px-5 text-center">
-                                FAQ
+                            <Nav.Link className="fw-semibold text-white px-4 text-center">
+                                <Link
+                                    className="text-decoration-none fw-semibold text-white"
+                                    to="/faq"
+                                >
+                                    FAQ
+                                </Link>
                             </Nav.Link>
-                            <Nav.Link className="px-5 text-center">
+                            <Nav.Link className="px-4 text-center">
                                 <Link
                                     className="text-decoration-none fw-semibold text-white"
                                     to="/blog"
@@ -60,25 +65,25 @@ const Header = () => {
                         <Nav>
                             <Nav.Link
                                 onClick={() => setDark(!dark)}
-                                className="fw-semibold text-white d-flex align-items-center justify-content-center"
+                                className="fw-semibold text-white d-flex align-items-center justify-content-center "
                             >
                                 {dark ? (
-                                    <Button variant="light">
-                                        <MdDarkMode className="text-dark border-0" />
+                                    <Button variant="light" className='rounded-5'>
+                                        <MdDarkMode className="text-dark border-0 " />
                                     </Button>
                                 ) : (
-                                    <Button variant="warning">
-                                        <MdWbSunny className="text-dark border-0" />
+                                    <Button variant="dark" className="rounded-5">
+                                        <MdWbSunny className="text-white border-0 " />
                                     </Button>
                                 )}
                             </Nav.Link>
                             <>
                                 {user?.uid ? (
-                                    <><Nav.Link className="d-flex align-items-center me-3 justify-content-center">
+                                    <><Nav.Link className="d-flex align-items-center me-3 justify-content-center ">
                                         {user?.photoURL ? (
                                             <div content={user?.displayName}>
                                                 <Image
-                                                    className="border border-2 border-warning"
+                                                    className="border border-2 border-light "
                                                     style={{ height: "30px", width: "30px" }}
                                                     roundedCircle
                                                     src={user?.photoURL}
@@ -88,7 +93,7 @@ const Header = () => {
                                             <div content={user?.displayName}>
                                                 <FaUser
                                                     style={{ height: "25px", width: "25px" }}
-                                                    className="text-dark bg-warning rounded-5 border border-warning border-2"
+                                                    className="text-dark bg-light rounded-5 border border-info border-2"
                                                 ></FaUser>
                                             </div>
                                         )}
@@ -96,10 +101,10 @@ const Header = () => {
 
                                         <Button
                                             onClick={handleSignOut}
-                                            variant="warning"
-                                            className="mx-auto d-block"
+                                            variant="outline-light"
+                                            className="d-block p-1 m-1 rounded-5"
                                         >
-                                            <Link className="text-decoration-none text-black">
+                                            <Link className="text-decoration-none text-dark">
                                                 Logout
                                             </Link>
                                         </Button>
@@ -107,10 +112,10 @@ const Header = () => {
                                 ) : (
                                     <>
                                         <Nav.Link className="d-block mx-auto">
-                                            <Button variant="warning">
+                                            <Button variant="outline-success" className='rounded-5'>
                                                 <Link
                                                     to="/login"
-                                                    className="text-decoration-none text-black"
+                                                    className="text-decoration-none text-dark"
                                                 >
                                                     Login
                                                 </Link>

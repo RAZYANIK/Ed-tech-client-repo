@@ -1,29 +1,32 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import img1 from '../../../utilies/dop1.png';
+import img2 from '../../../utilies/dop2.png';
+import img3 from '../../../utilies/dop3.jpg';
 const Slider = () => {
     return (
         <Carousel >
             <Carousel.Item>
-                <img style={{ height: '600px' }}
+                <img style={{ height: '350px' }}
                     className="d-block w-100 "
-                    src="https://static.vecteezy.com/system/resources/previews/001/937/734/non_2x/digital-book-online-education-blank-space-paper-and-graduate-hat-on-laptop-mobile-phone-website-background-social-distance-concept-vector.jpg"
+                    src={img2}
                     alt="First slide"
                 />
 
             </Carousel.Item>
             <Carousel.Item>
-                <img style={{ height: '600px' }}
+                <img style={{ height: '400px' }}
                     className="d-block w-100 "
-                    src="https://static.vecteezy.com/system/resources/previews/001/937/734/non_2x/digital-book-online-education-blank-space-paper-and-graduate-hat-on-laptop-mobile-phone-website-background-social-distance-concept-vector.jpg"
+                    src={img1}
                     alt="Second slide"
                 />
 
 
             </Carousel.Item>
             <Carousel.Item>
-                <img style={{ height: '600px' }}
+                <img style={{ height: '350px' }}
                     className="d-block w-100"
-                    src="https://www.giffgaff.com/blog/meet-ladyrosy/ladyroase_700%20x%20420pix_blog%20homepage_no%20logo.jpg"
+                    src={img3}
                     alt="Third slide"
                 />
 

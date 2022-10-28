@@ -6,7 +6,7 @@ import Navbar from './shared/Navbar/Navbar';
 const CoursePage = () => {
     return (
         <div>
-            <h1>this is course page</h1>
+            <h1 className='mt-5 fw-bold'>Welcome to your new E-journey</h1>
             <Container className="mb-5">
                 <Row>
 
