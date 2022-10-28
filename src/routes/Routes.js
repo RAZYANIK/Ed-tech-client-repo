@@ -25,7 +25,7 @@ export const routes = createBrowserRouter([
                 loader: () => fetch('https://ed-tech-server-razyanik.vercel.app/course')
             },
             {
-                path: "/courses/:id",
+                path: "/course/:id",
                 element: <CourseDetails></CourseDetails>,
                 loader: ({ params }) =>
                     fetch(

@@ -10,10 +10,10 @@ const CoursePage = () => {
             <Container className="mb-5">
                 <Row>
 
-                    <Col lg="10">
+                    <Col lg="9">
                         <CourseCards></CourseCards>
                     </Col>
-                    <Col lg="2">
+                    <Col lg="3">
                         <Navbar></Navbar>
                     </Col>
                 </Row>
