@@ -35,9 +35,10 @@ const Header = () => {
                         </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav" className='d-flex justify-content-between'>
-                        <Nav className="mx-4">
-                            <Nav.Link className="px-4 text-center">
+                    <Navbar.Collapse id="basic-navbar-nav"  >
+
+                        <Nav className="mx-auto">
+                            <Nav.Link className="px-5 text-center">
                                 <Link
                                     className="text-decoration-none fw-semibold text-white"
                                     to="/course"
@@ -45,7 +46,7 @@ const Header = () => {
                                     Courses
                                 </Link>
                             </Nav.Link>
-                            <Nav.Link className="fw-semibold text-white px-4 text-center">
+                            <Nav.Link className="fw-semibold text-white px-5 text-center">
                                 <Link
                                     className="text-decoration-none fw-semibold text-dark"
                                     to="/faq"
@@ -53,7 +54,7 @@ const Header = () => {
                                     FAQ
                                 </Link>
                             </Nav.Link>
-                            <Nav.Link className="px-4 text-center">
+                            <Nav.Link className="px-5 text-center">
                                 <Link
                                     className="text-decoration-none fw-semibold text-white"
                                     to="/blog"
@@ -127,6 +128,7 @@ const Header = () => {
                                 )}
                             </>
                         </Nav>
+
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
