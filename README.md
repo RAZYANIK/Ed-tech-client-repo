@@ -22,6 +22,7 @@ This Professional courses Certificate will help anyone interested in pursuing a 
 -they Also can find some most asked questions answer under FAQ.
 
 -also they can read the daily Blog section for free.
+
 -they can sign up by using their email name and photo url or they can easily use their gmail and github account to easily log in to the site (which will save lot of time for them).
 
 
