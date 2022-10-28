@@ -16,25 +16,22 @@ const Checkout = () => {
                     src={selectedCourse.coverPicture}
                 />
                 <Card.Body>
-                    <Card.Title className="text-warning fw-bold text-center">
-                        {selectedCourse.courseName}
+                    <Card.Title className="text-dark bg-success p-1 fw-bold text-center">
+                        <span className='text-light'>Your Course:</span> {selectedCourse.courseName} <span className='text-light'>by</span> {selectedCourse.courseInstructor}
                     </Card.Title>
-                    <div className="mb-3 d-flex flex-column justify-content-center align-items-center">
+                    <div className="mb-3 d-flex  justify-content-between align-items-center">
+
                         <h5>
-                            <Badge bg="light" className="text-dark">
-                                Course Price: {selectedCourse.price}
-                            </Badge>
-                        </h5>
-                        <h5>
-                            <Badge bg="warning" className="text-dark">
+                            <Badge bg="warning" className="text-dark rounded-0">
                                 Course Duration: {selectedCourse.duration}
                             </Badge>
                         </h5>
                         <h5>
-                            <Badge bg="warning" className="text-dark">
-                                Course Instructor: {selectedCourse.courseInstructor}
+                            <Badge bg="danger" className="text-dark rounded-0 m-2 p-2">
+                                You have pay total: {selectedCourse.price}
                             </Badge>
                         </h5>
+
                     </div>
                 </Card.Body>
             </Card>
