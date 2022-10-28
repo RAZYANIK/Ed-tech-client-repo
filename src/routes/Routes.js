@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Blog from "../page/Blog";
+import Checkout from "../page/Checkout";
 import CourseDetails from "../page/CourseDetails";
 import CoursePage from "../page/CoursePage";
 import Faq from "../page/Faq";
@@ -8,6 +9,7 @@ import Home from "../page/Home/Home";
 import Login from "../page/Login";
 import Signup from "../page/Signup";
 import NotFound from "./NotFound";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const routes = createBrowserRouter([
@@ -31,6 +33,12 @@ export const routes = createBrowserRouter([
                     fetch(
                         `https://ed-tech-server-razyanik.vercel.app/course/${params.id}`
                     ),
+            },
+            {
+                path: '/checkout/:id',
+                element: (<PrivateRoute><Checkout></Checkout></PrivateRoute>),
+                loader: ({ params }) =>
+                    fetch(`https://ed-tech-server-razyanik.vercel.app/course/${params.id}`)
             },
             {
                 path: "/faq",

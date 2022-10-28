@@ -1,10 +1,15 @@
 import React from 'react';
 import { Badge, Button, Card } from "react-bootstrap";
 import { Link, useLoaderData } from 'react-router-dom';
+import { FaDownload } from 'react-icons/fa';
+import Pdf from "react-to-pdf";
+
 
 const ref = React.createRef();
+
 const CourseDetails = () => {
     const courseDetails = useLoaderData();
+
     return (
         <div>
             <div className="container mt-5">
@@ -18,12 +23,16 @@ const CourseDetails = () => {
                 <div className="d-flex justify-content-between flex-lg-row flex-md-row flex-sm-column flex-column mb-3">
                     <h3 className="fw-bolder text-dark">{courseDetails.courseName}</h3>
 
+                    <Pdf targetRef={ref} filename={`${courseDetails.courseName}.pdf`}>
+                        {({ toPdf }) => (
+                            <Button variant="warning" className="px-5 py-2" onClick={toPdf}>
+                                <span className="me-2">Download PDF</span>
+                                <FaDownload />
+                            </Button>
+                        )}
+                    </Pdf>
 
 
-                    <Button variant="warning" className="px-5 py-2" >
-                        <span className="me-2">Download PDF</span>
-
-                    </Button>
 
 
                 </div>
